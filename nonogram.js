@@ -215,7 +215,7 @@ function aggiornaColonna(col) {
     }
     local_j = 0;
     while(local_j < dim) {
-		// finché non vengono trovate celle poste a 1, si scorre semplicemente la colonna
+		// finché non vengono trovate celle poste a 1 si scorre semplicemente la colonna
         while(local_j < dim&&k[local_j][col]==0) local_j++;
         // quando viene trovato un 1, si scorre finché la sequenza trovata non finisce, e per ogni 1 trovato si incrementa il valore della sequenza ct-esima sulla colonna 
         while(local_j < dim&&k[local_j][col]==1) {
