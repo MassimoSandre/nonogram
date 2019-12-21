@@ -1,0 +1,276 @@
+body {
+    background-color: #121212;
+
+}
+
+.container {
+    display: flex;
+}
+
+.on, .off {
+    cursor: pointer;
+    border-radius:5px;
+    
+    box-shadow: 2px 2px;
+}
+
+.on {
+    background-color: #b030b0;
+    border-color: #b030b0;
+    border-width: 0px;
+    opacity: 0.6;
+}
+.off {
+    background-color: #19191c;
+    border-color: #19191c;
+    border-width: 4px;
+}
+
+.nosat {
+    background-color: #19191c; 
+    border-color: #19191c;
+    color: white;
+}
+
+.sat {
+    background-color: white; 
+    border-color: white;
+    color: black;
+    
+}
+
+.sat, .nosat {
+    font-weight: 1200;
+    font-size: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    
+    border-radius: 5px;
+    opacity: 0.87;
+    box-shadow: 2px 2px black;
+    text-align: center;
+}
+
+.nosat,.sat,.off,.on {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.tableset {
+    position: relative;
+    margin: 100px;
+    margin-top: 10px;
+    float: left;
+    
+    
+}
+
+.table1 {
+    border-style: hidden;
+    display: grid;
+    
+    border-width: 4px;
+    border-spacing: 5px 5px;
+
+    position: relative;
+    
+    float: left;
+}
+
+.winner {
+    visibility: visible;
+    text-align: center;
+    color: white;
+    font-weight: 1200;
+    font-size: 35px;
+    font-family: Verdana, Geneva, sans-serif;
+    border-color: #19191c;
+    background-color: #19191c;
+    border-radius: 5px;
+    opacity: 0.87;
+    box-shadow: 2px 2px black;
+    padding: 10px;
+}
+.loser {
+    visibility: hidden;
+}
+
+.seldim {
+    border-style: solid;
+    background-color: #19191c;
+    border-color: #19191c;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.87;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px black;
+    margin: 10px 10px 10px 10px;
+    font-weight: 1200;
+    font-size: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+select.seldim  {
+    margin-left: 5%;
+}
+
+.gametit, .istrudiv h1, .istrudiv p{
+    opacity: 0.87;
+    font-weight: 1200;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.gametit {
+    color: white;  
+    font-size: 50px;
+}
+
+.istrudiv {
+    position: relative;
+    
+    border-style: solid;
+    background-color: #19191c;
+    border-color: #19191c;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.87;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+
+    box-shadow: 3px 3px black;
+    margin-top:50px;
+    flex: 1;
+    max-width: 30%;
+}
+.areagioco {  
+    position: relative;
+    float: left;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+@media only screen and (max-device-width: 900px) {
+    .container {
+        display: table;
+    }
+    .istrudiv {
+        position: relative;
+        /*top: 500px;*/
+        
+        margin-top: 0px;
+        margin-left: 5%;
+        margin-right: 10%;
+        max-width: 85%;
+        width: 85%;
+
+        border-style: solid;
+        background-color: #19191c;
+        border-color: #19191c;
+        border-radius: 5px;
+        color: white;
+        opacity: 0.87;
+        float: left;
+
+        box-shadow: 3px 3px black;
+        
+        
+    }
+    .areagioco {  
+        position: relative;
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .tableset {
+        margin-left: 10px;
+    }
+    .table1 {
+        margin-left: 10px;
+    }
+    /*.off:hover{
+      background-color: #b030b0;
+      border-color: #b030b0;
+      border-width: 0px;
+      opacity: 0.6;
+    }
+    .on:hover {
+    	background-color: #19191c;
+    border-color: #19191c;
+    border-width: 4px;
+	}*/
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.label1 {
+	cursor: pointer;
+	width: 65px;
+	height: 30px;
+	background: white;
+	display: block;
+	border-radius: 100px;
+    position: relative;
+    box-shadow: black 2px 2px;
+    opacity: 0.87;
+    margin-left: 30px;
+}
+
+.label1:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #19191c;
+	border-radius: 20px;
+    transition: 0.3s;
+    opacity: 0.87;
+}
+
+
+input:checked + .label1:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.label1:active:after {
+	width: 30px;
+}
+
+.label2 {
+    font-size: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: white;
+    opacity: 0.87;
+}
+
+.designed {
+    color: #999999;
+    font-size: 20px;
+}
+
+.header .themesel,.header .gametit {
+    display: inline-block;
+    margin-top: 0px;
+}
+
+
+.header .themesel {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
